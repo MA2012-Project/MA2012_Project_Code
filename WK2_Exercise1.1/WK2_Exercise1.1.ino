@@ -7,7 +7,6 @@
 #define solenoidPin 10
 #define ledPin 13 
 
-volatile int toggleSwitchPinState = 0;
 
 
 void setup() {
