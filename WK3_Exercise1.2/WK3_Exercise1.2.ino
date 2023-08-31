@@ -28,7 +28,7 @@ void loop() {
       getUltraSonicReading();
       if (distance > 25) {
         //Serial.println("distance > 20");
-        tone(piezoBuzzer, 200, 200);
+        tone(piezoBuzzer, 200, 200); //tone(which Pin?, Frequency Tone, Duration in millis());
         delay(400);
       }else if (distance > 10) { 
         //Serial.println("distance > 20");
