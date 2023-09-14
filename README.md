@@ -11,7 +11,10 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/9937a906-98a3-4c70-a3f6-adb6c64ee5a3" width="850" height = "650"/>
 
 ## Exercise **2-1**: Gantry Crane
-<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/d8a86a34-3430-4ad1-a824-3356c3817f1b)" width="850" height = "650"/>
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/d8a86a34-3430-4ad1-a824-3356c3817f1b" width="850" height = "650"/>
+
+## Exercise **2-3**: Calculator
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/4d9fd624-6cdd-4046-a5c7-0790a4fcd6b8" width ="850" height = "650"/>
 
 
 
