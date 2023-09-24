@@ -1,4 +1,4 @@
-### Texts formats url 
+![image](https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/edb084d5-e6a2-44ef-b662-ac50a8dba172)### Texts formats url 
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 # Exercise list 
 ## Exercise **1-1**: Cutting machine 
@@ -16,7 +16,11 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 ## Exercise **2-3**: Calculator
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/4d9fd624-6cdd-4046-a5c7-0790a4fcd6b8" width ="850" height = "650"/>
 
+## Exercise **3-1**: Inclinometer 
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/785e01d7-8fe1-4f97-8a82-cf927f04033e" width ="850" height ="650"/>
 
+##Exercise **3-2**: Voltage Machine
+<img src="
 
 
 
