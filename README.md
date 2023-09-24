@@ -1,4 +1,4 @@
-![image](https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/edb084d5-e6a2-44ef-b662-ac50a8dba172)### Texts formats url 
+### Texts formats url 
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 # Exercise list 
 ## Exercise **1-1**: Cutting machine 
