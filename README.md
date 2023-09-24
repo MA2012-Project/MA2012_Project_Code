@@ -20,7 +20,7 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/785e01d7-8fe1-4f97-8a82-cf927f04033e" width ="850" height ="650"/>
 
 ##Exercise **3-2**: Voltage Machine
-<img src="
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/d0013cf1-ade2-4ed9-b570-c34a57113e6d" width="850" height="650"/>
 
 
 
