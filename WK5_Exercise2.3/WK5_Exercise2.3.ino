@@ -13,24 +13,22 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 #define KB_D 13
 
 // Declare keypad layout
-char keys[] = {'1','2','3','F',
-               '4','5','6','E',
+char keys[] = {'1','2','3','F', //A +, B -, C *, D /, E =, 3 digits (0-999) no decimals
+               '4','5','6','E', // F + E off, 
                '7','8','9','D',
                'A','0','B','C'};
 
 #define NO_OF_CHAR 6
 char virt_1[NO_OF_CHAR+1]; //means got 7 spaces for the list 
-char virt_2[NO_OF_CHAR+1];
+char op;
 volatile int calcStatus =0;
-int intVirt_1 = 0.00;
+int intVirt_1 = 0;
 
 void setup() {
   for (int i=0;i<NO_OF_CHAR;i++){
     virt_1[i]=' ';
-    virt_2[i]=' ';
   }
   virt_1[NO_OF_CHAR] =0;
-  virt_2[NO_OF_CHAR] =0;
   pinMode(KB_DataAvailable, INPUT);
   pinMode(KB_A,INPUT);
   pinMode(KB_B,INPUT);
@@ -38,16 +36,18 @@ void setup() {
   pinMode(KB_D,INPUT);
   
   lcd.begin(16,2);
+  lcd.setCursor(0,0);
   lcd.print("Hello World!");
 }
 
 void loop() {
  //check if the keypad is hit
     if(digitalRead(KB_DataAvailable)) {
-      //initCalc();
+      initCalc();
     }
-      if (calcStatus == 1){ //means calc is online 
-        while(1){
+    if (calcStatus == 1){ //means calc is online 
+      while(1){
+         if(digitalRead(KB_DataAvailable)) {
           KB_Read();
           if ((virt_1[NO_OF_CHAR -1]) == "+") {
             addition();
@@ -77,18 +77,23 @@ void loop() {
             equal();  
           }  
           else if ((virt_1[NO_OF_CHAR -1]) == "A" && (virt_1[NO_OF_CHAR - 1]) == "A") { //To clear the data to 0 
-            intVirt_1 = 0.00;
+            intVirt_1 = 0;
             for (int i=0;i<NO_OF_CHAR;i++){
               virt_1[i]=' ';
-              virt_2[i]=' ';
             }
-          }  
+          }
+          else if (((virt_1[NO_OF_CHAR -2]) == "F" && (virt_1[NO_OF_CHAR - 1]) == "E") ||((virt_1[NO_OF_CHAR -2]) == "E" && (virt_1[NO_OF_CHAR - 1]) == "F"))  { 
+            calcStatus =0;
+            break;
+          }
           else {
             continue;
           }
         }
+        delay(1000);
       }
-      delay(1000);
+      
+    }
 }
     
 
@@ -113,7 +118,7 @@ void initCalc(){ //checks for 'F' 'F'
     }
 }
 void addition() {
-    volatile double setPos =0.00;
+    volatile int setPos =0.00;
     for (int i=0; i<NO_OF_CHAR; i++){
       if ((virt_1[i] - 48) >=0 && (virt_1[i] - 48) <58){
        setPos *= 10;
@@ -124,7 +129,7 @@ void addition() {
 }
 
 void subtraction() {
-    volatile double setPos =0.00;
+    volatile int setPos =0.00;
     for (int i=0; i<NO_OF_CHAR; i++){
       if ((virt_1[i] - 48) >=0 && (virt_1[i] - 48) <58){
        setPos *= 10;
@@ -135,7 +140,7 @@ void subtraction() {
 }
 
 void devision() {
-  volatile double setPos= 0.00;
+  volatile int setPos= 0.00;
   for (int i =0; i<NO_OF_CHAR; i++){
     if ((virt_1[i] -48) >= 0 && (virt_1[i] < 58)){
       setPos *= 10;
@@ -146,7 +151,7 @@ void devision() {
 }
 
 void multiplication() {
-  volatile double setPos= 0.00;
+  volatile int setPos= 0.00;
   for (int i =0; i<NO_OF_CHAR; i++){
     if ((virt_1[i] -48) >= 0 && (virt_1[i] < 58)){
       setPos *= 10;
@@ -157,7 +162,7 @@ void multiplication() {
 }
 
 void equal() {
-  itoa(intVirt_1, virt_2, 10); // Convert integer to string in base 10
+  itoa(intVirt_1, virt_1, 10); // Convert integer to string in base 10
   lcd.setCursor(0, 1);    
-  lcd.print(virt_2);
+  lcd.print(virt_1);
 }
