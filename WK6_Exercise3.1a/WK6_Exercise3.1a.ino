@@ -1,8 +1,19 @@
+//Remember address are usually 6 bits, then the remaining 2 bits are read/write and multiple/single bite. 
+// If address 111000, if i want to read singular byte, 10111000 -> 1 byte
+// If address 111000, if i want to write singular byte, 00111000 -> 1 byte
+// If address 111000, if i want to read multiple byte, 11111000 -> 1 byte
+// If address 111000, if i want to write multiple byte, 01111000 -> 1 byte
+// At first need to close "Chip_Select", to stop all communications. Only applicable for SPI_Mode3
+// Once u want to communicate, set "Chip_Select" to low, then do what u want to do, followed by "Chip_Select" to high. 
+// Here they did use BitwiseOR, since the data of x,y,z are 2 bytes, but the arduino UNO can only receive 1byte at a time. Therefore, they use BitWise OR and BitWise Shift. 
+// All the values are in 0x (HEX) but the address and everything are in (BINARY). So what they do is they give Hex val, and the computer auto translate to binary. 
+
 #include <SPI.h> 
 #define CS_Pin  10
 #define LED 3
 #define pi 3.14159
 SPISettings settingsA(2000000, MSBFIRST, SPI_MODE3); // SPI_Mode3 means if high no signal, low only got signal 
+
 
 int range = 8; // measurement range is 8g 
 float scale =0.0000;
@@ -108,7 +119,7 @@ void loop() {
     Serial.println(String(angleZ) + " degrees"); 
   }
   else {
-    angleZ = round(angleZ* 2) * 0.5;
+    angleZ = round(angleZ* 2) * 0.5; //change it to only 1dp.  0 and 0.5 
     digitalWrite(LED,LOW); 
     Serial.println(String(angleZ) + " degree");
   }  
