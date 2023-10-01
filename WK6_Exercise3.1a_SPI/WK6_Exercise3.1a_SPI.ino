@@ -93,7 +93,7 @@ void setup() {
 void loop() {
   if (scale == 1) return; // stops the loop if scale == 1, means its not defined properly 
   unsigned long currentMillis = millis();
-  static long previousMillis =0.000;
+  static volatile long previousMillis =0.000;
   
   digitalWrite(CS_Pin, LOW);
   SPI.transfer(0xF2);
