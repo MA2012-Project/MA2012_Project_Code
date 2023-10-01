@@ -74,11 +74,13 @@ void loop() {
   
   Wire.beginTransmission(accelAddress);
   Wire.write(0x32);
-  Wire.endTransmission(false);// do not need this since they are adjacent 
+  Wire.endTransmission(false); //I still dunno why need this.  
   Wire.requestFrom(accelAddress, 6, true);
   int X = Wire.read() | Wire.read() << 8;
   int Y = Wire.read() | Wire.read() << 8;
   int Z = Wire.read() | Wire.read() << 8;
+  //Wire.endTransmission(true); //can either put at 4 lines above as false, or last here and true
+  
 
   float accelX = X*scale;
   float accelY = Y*scale;
