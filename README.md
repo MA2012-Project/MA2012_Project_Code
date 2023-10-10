@@ -22,6 +22,17 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 ## Exercise **3-2**: Voltage Machine
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/d0013cf1-ade2-4ed9-b570-c34a57113e6d" width="850" height="650"/>
 
+## CA1 
+### MCU_1
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/292fd5ed-f9da-4f81-84e4-494592d23e4d" width ="850" height="650"/>
+### MCU_2
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/97f154c7-5e27-479c-ab68-f8ea721c0964" width="850" height="650"/>
+### LAB 
+Description 
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/5669fd4a-1fa3-4427-b472-18948f4477ce" width="850" height ="650"/>
+Image 
+<img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/bd01db31-0990-4eca-a5f9-a506cc6afa60" width="850" height="650"/>
+
 
 
 
