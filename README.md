@@ -25,8 +25,10 @@ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-wr
 ## CA1 
 ### MCU_1
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/292fd5ed-f9da-4f81-84e4-494592d23e4d" width ="850" height="650"/>
+
 ### MCU_2
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/97f154c7-5e27-479c-ab68-f8ea721c0964" width="850" height="650"/>
+
 ### LAB 
 Description 
 <img src="https://github.com/MA2012-Project/Weekly-lab-exercise-code/assets/126668542/5669fd4a-1fa3-4427-b472-18948f4477ce" width="850" height ="650"/>
